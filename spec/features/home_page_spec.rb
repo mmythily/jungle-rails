@@ -10,6 +10,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
       @category.products.create!(
         name: Faker::Hipster.sentence(1),
         description: Faker::Hipster.paragraph(4),
+        image:open_asset('apparel1.jpg'),
         quantity: 10,
         price: 64.99
       )
@@ -22,7 +23,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     #DEBUG
     save_screenshot
     #VERIFY
-    expect(page).to have_css 'article.product'
+    expect(page).to have_css 'article.product', count:10
   end
 
 end
