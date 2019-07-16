@@ -44,8 +44,13 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'dotenv-rails'
 
-  #Use Rspec
+  # Use Rspec
   gem 'rspec-rails', '~> 3.5'
+
+  # Use Feature Testing
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 
 end
 
